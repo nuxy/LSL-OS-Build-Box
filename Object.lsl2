@@ -61,7 +61,7 @@ save_location()
     rotation rot    = llGetRot();
     vector   offset = <(float)(pos.x - master.x), (float)(pos.y - master.y), (float)(pos.z - master.z)>;
 
-	// write to description field
+    // write to description field
     llSetObjectDesc( (string)offset + "," + (string)rot);
 
     if (verbose)

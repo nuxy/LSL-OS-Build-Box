@@ -71,7 +71,7 @@ default
     land_collision(vector pos)
     {
 
-		// 'build box' current vector position
+        // 'build box' current vector position
         target = llGetPos();
 
         if (verbose)
