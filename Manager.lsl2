@@ -17,7 +17,7 @@ string  text = "Package Manager";
 vector  target;
 
 /*
- * Instanciate each object to the region
+ * Instantiate each object to the region
  */
 rez_objects()
 {
