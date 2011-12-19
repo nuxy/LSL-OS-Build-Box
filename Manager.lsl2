@@ -12,7 +12,7 @@
 
 integer channel = 300;    // build box channel
 integer lkey;
-integer verbose = TRUE;
+integer verbose = FALSE;
 string  text = "Package Manager";
 vector  target;
 

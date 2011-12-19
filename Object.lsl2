@@ -11,7 +11,7 @@
  */
 
 integer channel = 300;    // build box channel
-integer verbose = TRUE;
+integer verbose = FALSE;
 vector  master;
 
 /*
@@ -96,7 +96,6 @@ default
         key    uuid   = llList2Key(   params, 2);
 
         master = pos;
-
 
         if (action == "Install")
         {
