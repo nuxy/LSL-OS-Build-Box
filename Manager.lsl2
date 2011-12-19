@@ -139,7 +139,6 @@ default
      */
     object_rez(key id)
     {
-        llSleep(2);
         llSay(channel, "Install|" + (string)target + "|" + (string)id);
     }
 }
