@@ -20,9 +20,9 @@ It is assumed that you have a clear understanding of how to create objects withi
 
 There are two scripts required in order for this to work.
 
-- {Manager.lsl2}[https://github.com/nuxy/LSL-OS-Build-Box/blob/master/Manager.lsl2] (Recorder/Installer script)
+- {Manager.lsl}[https://github.com/nuxy/LSL-OS-Build-Box/blob/master/Manager.lsl] (Recorder/Installer script)
 
-- {Object.lsl2}[https://github.com/nuxy/LSL-OS-Build-Box/blob/master/Object.lsl2] (Action script)
+- {Object.lsl}[https://github.com/nuxy/LSL-OS-Build-Box/blob/master/Object.lsl] (Action script)
 
 Setting this up is fairly easy.
 
