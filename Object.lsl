@@ -1,8 +1,8 @@
-/*
+/**
  *  Build Box
- *  Primitive recorder/installer for LSL and Open Simulator platforms
+ *  Primitive recorder/installer for LSL and Open Simulator platforms.
  *
- *  Copyright 2011-2012, Marc S. Brooks (http://mbrooks.info)
+ *  Copyright 2011-2012, Marc S. Brooks (https://mbrooks.info)
  *  Licensed under the MIT license:
  *  http://www.opensource.org/licenses/mit-license.php
  *
@@ -10,7 +10,7 @@
  *    Add this to the contents of each object or linked set root
  */
 
-integer channel = 300;    // build box channel
+integer channel = 300;    // Build box channel
 integer verbose = FALSE;
 vector  master;
 
@@ -19,7 +19,7 @@ vector  master;
  */
 move_object(key id)
 {
-    // parse data stored in the object description
+    // Parse data stored in the object description.
     list llist = llCSV2List( llGetObjectDesc() );
 
     if (llist == "" && id != llGetKey() )
@@ -27,7 +27,7 @@ move_object(key id)
         return;
     }
 
-    // split elements
+    // Split elements
     vector   offset = llList2Vector(llist, 0);
     rotation rot    = llList2Rot(   llist, 1);
     vector   target = master + offset;
@@ -36,7 +36,7 @@ move_object(key id)
     do {
         last = llGetPos();
 
-        // set object properties
+        // Set object properties
         llSetPos(target);
         llSetRot(rot);
     }
@@ -51,8 +51,8 @@ move_object(key id)
     }
 }
 
-/*
- * Store object properties vector position and rotation axis
+/**
+ * Store object properties vector position and rotation axis.
  */
 save_location()
 {
@@ -61,7 +61,7 @@ save_location()
     rotation rot    = llGetRot();
     vector   offset = <(float)(pos.x - master.x), (float)(pos.y - master.y), (float)(pos.z - master.z)>;
 
-    // write to description field
+    // Write to description field.
     llSetObjectDesc( (string)offset + "," + (string)rot);
 
     if (verbose)
@@ -73,8 +73,8 @@ save_location()
     }
 }
 
-/*
- * Listen to channel for transmission from 'build box' object
+/**
+ * Listen to channel for transmission from 'build box' object.
  */
 default
 {

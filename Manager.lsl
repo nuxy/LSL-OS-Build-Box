@@ -1,8 +1,8 @@
-/*
+/**
  *  Build Box
  *  Primitive recorder/installer for LSL and Open Simulator platforms
  *
- *  Copyright 2011-2012, Marc S. Brooks (http://mbrooks.info)
+ *  Copyright 2011-2012, Marc S. Brooks (https://mbrooks.info)
  *  Licensed under the MIT license:
  *  http://www.opensource.org/licenses/mit-license.php
  *
@@ -10,14 +10,14 @@
  *    Add this to the contents of the root 'build box' object
  */
 
-integer channel = 300;    // build box channel
+integer channel = 300;    // Build box channel
 integer lkey;
 integer verbose = FALSE;
 string  text = "Package Manager";
 vector  target;
 
-/*
- * Instantiate each object to the region
+/**
+ * Instantiate each object to the region.
  */
 rez_objects()
 {
@@ -29,7 +29,7 @@ rez_objects()
     {
         llOwnerSay("Rezzing Objects");
 
-        // iterate each object stored in 'build box' contents
+        // Iterate each object stored in 'build box' contents.
         for (; count < num; count++)
         {
             name = llGetInventoryName(INVENTORY_OBJECT, count);
@@ -58,8 +58,8 @@ default
         llResetScript();
     }
 
-    /*
-     * Align 'build box' object to the highest point of the region heightmap
+    /**
+     * Align 'build box' object to the highest point of the region heightmap.
      */
     state_entry()
     {
@@ -71,7 +71,7 @@ default
     land_collision(vector pos)
     {
 
-        // 'build box' current vector position
+        // 'Build Box' current vector position.
         target = llGetPos();
 
         if (verbose)
@@ -83,8 +83,8 @@ default
         llSetPrimitiveParams([ PRIM_PHYSICS, FALSE ]);
     }
 
-    /*
-     * Open dialog menu; listen for button events
+    /**
+     * Open dialog menu; listen for button events.
      */
     touch_start(integer num)
     {
@@ -134,8 +134,8 @@ default
         }
     }
 
-    /*
-     * Transmit message containing the 'build box' vector position and rotation axis data
+    /**
+     * Transmit message containing the 'build box' vector position and rotation axis data.
      */
     object_rez(key id)
     {
