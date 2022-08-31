@@ -2,6 +2,8 @@
 
 Primitive recorder/installer for LSL and Open Simulator platforms.
 
+![OpenSimulator](https://raw.githubusercontent.com/nuxy/LSL-OS-Build-Box/master/demo.gif)
+
 ## What is this for?
 
 When building objects within the simulator there is a server-based limitation of 256 primitives that can be used within a linkset group. On designs that require a large number of primitives this poses an issue resulting in having to break up your objects into multiple parts only having to carefully reassemble them once instantiated.
